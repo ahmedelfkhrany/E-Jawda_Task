@@ -1,0 +1,111 @@
+@import "../../assets/style/utils/variables.scss";
+
+.aside-wrapper {
+  background-color: $primary;
+  &-user {
+    position: relative;
+    &::after {
+      content: "";
+      background-color: $light-shade-2;
+      position: absolute;
+      bottom: 0;
+      height: 0.5rem;
+      width: 5rem;
+    }
+  }
+  &-nav-item {
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: $light-shade-2;
+      background-color: $hover-shade-1;
+      font-weight: bold;
+      a {
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  .logo-image {
+    filter: brightness(0) invert(1);
+    width: 80%;
+    opacity: 0.9;
+  }
+  .form-select {
+    padding: 0.2rem 2.5rem;
+    margin: 3rem;
+    @media (max-width: 776px) {
+      background-image: none;
+      padding: 0.2rem 0.5rem;
+      margin: 0.5rem;
+    }
+  }
+  .link-category-name {
+    color: $primary-shade-1;
+  }
+  .nav-footer {
+    .card {
+      background-position: 0 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      .btn {
+        border-radius: 0;
+      }
+      &.create-record {
+        background-image: url("../../assets/images/abstract-city.jpg");
+
+        .card-body {
+          background-color: $opacity-overlay;
+          .card-title {
+            color: $secondary;
+            font-weight: bold;
+          }
+          .card-text a {
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+      }
+      &.create-licence {
+        background-image: url("../../assets/images/calculations.jpg");
+
+        .card-body {
+          background-color: $opacity-overlay-dark;
+          .card-text {
+            font-weight: bold;
+            color: $light-shade-2;
+          }
+          .btn-light {
+            color: $primary;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .copyright {
+      img {
+        width: 150px;
+        display: block;
+        margin: auto;
+        margin-top: 4rem;
+      }
+      .developed-by {
+        font-weight: bold;
+        color: $light-shade-2;
+        font-size: 1.4rem;
+        &::after {
+          content: "";
+          display: inline-block;
+          height: 0.1rem;
+          width: 30%;
+          background-color: $light-shade-2;
+        }
+      }
+      .copyright-text {
+        color: $light-shade-2;
+        width: 80%;
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+}
